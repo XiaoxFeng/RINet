@@ -1,18 +1,7 @@
 # Weakly Supervised Rotation-Invariant Aerial Object Detection Network
 By Xiaoxu Feng, Xiwen Yao, Gong Cheng, Junwei Han
 ## Citation
-(Feng, Yao 2022)
 
-<div id="refs" class="references csl-bib-body hanging-indent">
-<div id="ref-xie2018" class="csl-entry">
-
-Xie, Yihui, J. J. Allaire, and Garrett Grolemund. 2018. *R Markdown: The
-Definitive Guide*. Boca Raton, Florida: Chapman; Hall/CRC.
-<https://bookdown.org/yihui/rmarkdown>.
-
-</div>
-
-</div>
 ## Overview
 ![Overview](https://github.com/XiaoxFeng/RINet/blob/main/Overview.jpg)
 
