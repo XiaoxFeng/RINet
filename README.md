@@ -2,7 +2,7 @@
 By Xiaoxu Feng, Xiwen Yao, Gong Cheng, Junwei Han
 ## Citation
 ```python
-@article{XiaoxFeng, <tar>
+@article{XiaoxFeng, <br>
 >> author = {Xiaoxu Feng}
 }
 ```
