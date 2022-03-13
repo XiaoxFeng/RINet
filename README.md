@@ -20,7 +20,7 @@ The code will be released soon.
 ## Installation
 1. Clone the RINet repository
 
-'''
+'''python
 
   jhjhj
 
