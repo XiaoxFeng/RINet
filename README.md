@@ -1,7 +1,9 @@
 # Weakly Supervised Rotation-Invariant Aerial Object Detection Network
 By Xiaoxu Feng, Xiwen Yao, Gong Cheng, Junwei Han
 ## Citation
-
+```python
+@article{XiaoxFeng, <tar>
+'''
 ## Overview
 ![Overview](https://github.com/XiaoxFeng/RINet/blob/main/Overview.jpg)
 
