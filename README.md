@@ -16,5 +16,8 @@ The code will be released soon.
 * GPU: GeForce RTX 2080Ti | Tesla V100
 ## Installation
 1. clone the RINet repository
-2. Download the training, validation, test data and VOCdevkit
-3. Extract all of these tars into one directory named VOCdevkit
+2. Compile
+3. Download the training, validation, test data and VOCdevkit
+4. Extract all of these tars into one directory named VOCdevkit
+5. Download pretrained ImageNet weights from here, and put it in the data/imagenet_weights/
+6. Download selective search proposals from [NWPU](https://drive.google.com/file/d/1VnmUDPomgTgmHvH3CemFOIWTLuVR5f-t/view?usp=sharing) and [DIOR](https://drive.google.com/file/d/1wbivkAxqBQB4vAX0APmVzIOhuawHpsPV/view?usp=sharing), and put it in the data/selective_search_data/
