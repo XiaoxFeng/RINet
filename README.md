@@ -27,12 +27,18 @@ git clone https://github.com/XiaoxFeng/RINet.git
 cd RINet/lib
 bash make.sh
 ```
-3. Download the training, validation, test data from [NWPU](https://onedrive.live.com/?authkey=%21ADaUNysmiFRH4eE&cid=5C5E061130630A68&id=5C5E061130630A68%21115&parId=5C5E061130630A68%21113&action=locate) and [DIOR](https://drive.google.com/drive/folders/1UdlgHk49iu6WpcJ5467iT-UqNPpx__CC) and VOCdevkit
+3.Download the VOCdevkit
 ```bash
 cd RINet/data/
 wget 
 ```
-7. Extract all of these tars into one directory named VOCdevkit
+4.Download the VOCdevkit and renamed it as VOCdevkit2007
+```bash
+cd RINet/data/
+wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCdevkit_08-Jun-2007.tar
+```
+5. Download the training, validation, test data from [NWPU](https://onedrive.live.com/?authkey=%21ADaUNysmiFRH4eE&cid=5C5E061130630A68&id=5C5E061130630A68%21115&parId=5C5E061130630A68%21113&action=locate) [DIOR](https://drive.google.com/drive/folders/1UdlgHk49iu6WpcJ5467iT-UqNPpx__CC)
+6. Extract all of these tars into one directory named VOCdevkit2007
 8. Download pretrained ImageNet weights from [here](https://drive.google.com/drive/folders/0B1_fAEgxdnvJSmF3YUlZcHFqWTQ), and put it in the data/imagenet_weights/
 9. Download selective search proposals from [NWPU](https://drive.google.com/file/d/1VnmUDPomgTgmHvH3CemFOIWTLuVR5f-t/view?usp=sharing) and [DIOR](https://drive.google.com/file/d/1wbivkAxqBQB4vAX0APmVzIOhuawHpsPV/view?usp=sharing), and put it in the data/selective_search_data/
 ## Acknowledgement
