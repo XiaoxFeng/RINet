@@ -44,6 +44,6 @@ bash experiments/scripts/train_faster_rcnn.sh 0 DIOR vgg16
 Test a vgg16 Network on DIOR test
 ```bash
 bash experiments/scripts/test_faster_rcnn.sh 0 DIOR vgg16
-'''
+```
 ## Acknowledgement
 We borrowed code from [MLEM](https://github.com/vasgaowei/pytorch_MELM), [PCL](https://github.com/ppengtang/pcl.pytorch), and [Faster-RCNN](https://github.com/jwyang/faster-rcnn.pytorch).
