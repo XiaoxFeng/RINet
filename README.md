@@ -2,9 +2,7 @@
 By Xiaoxu Feng, Xiwen Yao, Gong Cheng, Junwei Han
 ## Citation
 ```python
-@article{XiaoxFeng, <br>
->> author = {Xiaoxu Feng}
-}
+
 ```
 ## Overview
 ![Overview](https://github.com/XiaoxFeng/RINet/blob/main/Overview.jpg)
