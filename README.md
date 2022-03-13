@@ -18,6 +18,9 @@ The code will be released soon.
 * cython <br>
 * GPU: GeForce RTX 2080Ti | Tesla V100
 ## Installation
+'''bash
+bashjkjk
+'''
 1. Clone the RINet repository
 5. Compile
 6. Download the training, validation, test data and VOCdevkit
