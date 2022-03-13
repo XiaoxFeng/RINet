@@ -20,9 +20,13 @@ The code will be released soon.
 ## Installation
 1. Clone the RINet repository
 ```python
-git clone     
+git clone https://github.com/XiaoxFeng/RINet.git
 ``` 
-5. Compile
+2. Compile
+```bash
+cd RINet/lib
+bash make.sh
+```
 6. Download the training, validation, test data and VOCdevkit
 7. Extract all of these tars into one directory named VOCdevkit
 8. Download pretrained ImageNet weights from [here](https://drive.google.com/drive/folders/0B1_fAEgxdnvJSmF3YUlZcHFqWTQ), and put it in the data/imagenet_weights/
