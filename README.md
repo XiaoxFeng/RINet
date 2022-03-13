@@ -1,12 +1,11 @@
-# Weakly Supervised Rotation-Invariant Aerial Object Detection Network
+Weakly Supervised Rotation-Invariant Aerial Object Detection Network
 =====
-
 By Xiaoxu Feng, Xiwen Yao, Gong Cheng, Junwei Han
 
 The code will be released soon.
-# Citation
+Citation
 ___
-# Requirements
+Requirements
 ___
 * python == 3.6 <br>
 * Cuda == 9.0 <br>
