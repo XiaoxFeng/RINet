@@ -19,10 +19,7 @@ The code will be released soon.
 * GPU: GeForce RTX 2080Ti | Tesla V100
 ## Installation
 1. Clone the RINet repository
-
-'''python
-    python
-'''
+'''bash'''
 
 5. Compile
 6. Download the training, validation, test data and VOCdevkit
