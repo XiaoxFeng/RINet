@@ -14,3 +14,7 @@ The code will be released soon.
 * scipy <br>
 * cython <br>
 * GPU: GeForce RTX 2080Ti | Tesla V100
+## Installation
+1. clone the RINet repository
+2. Download the training, validation, test data and VOCdevkit
+3. Extract all of these tars into one directory named VOCdevkit
