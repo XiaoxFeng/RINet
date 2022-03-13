@@ -20,8 +20,9 @@ The code will be released soon.
 ## Installation
 1. Clone the RINet repository
 
+'''
     python
-tth
+'''
 
 5. Compile
 6. Download the training, validation, test data and VOCdevkit
