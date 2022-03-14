@@ -29,7 +29,7 @@ git clone https://github.com/XiaoxFeng/RINet.git
 cd RINet/lib
 bash make.sh
 ```
-3.Download the VOCdevkit and renamed it as VOCdevkit2007
+3.Download the VOCdevkit and rename it as VOCdevkit2007
 ```bash
 cd RINet/data/
 wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCdevkit_08-Jun-2007.tar
