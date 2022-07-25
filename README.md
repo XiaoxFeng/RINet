@@ -2,7 +2,14 @@
 By Xiaoxu Feng, Xiwen Yao, Gong Cheng, Junwei Han
 ## Citation
 ```python
-
+@InProceedings{Feng_2022_CVPR,
+    author    = {Feng, Xiaoxu and Yao, Xiwen and Cheng, Gong and Han, Junwei},
+    title     = {Weakly Supervised Rotation-Invariant Aerial Object Detection Network},
+    booktitle = {Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)},
+    month     = {June},
+    year      = {2022},
+    pages     = {14146-14155}
+}
 ```
 ## Overview
 ![Overview](https://github.com/XiaoxFeng/RINet/blob/main/Overview.jpg)
