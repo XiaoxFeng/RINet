@@ -1,7 +1,7 @@
 # Weakly Supervised Rotation-Invariant Aerial Object Detection Network
 By Xiaoxu Feng, Xiwen Yao, Gong Cheng, Junwei Han
 ## Citation
-```python
+```bash
 @InProceedings{Feng_2022_CVPR,
     author    = {Feng, Xiaoxu and Yao, Xiwen and Cheng, Gong and Han, Junwei},
     title     = {Weakly Supervised Rotation-Invariant Aerial Object Detection Network},
