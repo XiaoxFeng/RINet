@@ -1,7 +1,7 @@
 # Weakly Supervised Rotation-Invariant Aerial Object Detection Network
 By Xiaoxu Feng, Xiwen Yao, Gong Cheng, Junwei Han
 
-**We have released the codes of IENet work [here](https://github.com/XiaoxFeng/IENet). It is the extension of RINet and obtains state-of-the-art performance on the PASCAL VOC and COCO!**
+**We have released the codes of IENet work [here](https://github.com/XiaoxFeng/IENet). It is the extension of RINet and obtains state-of-the-art performance on the PASCAL VOC and MS COCO!**
 ## Citation
 ```bash
 @InProceedings{Feng_2022_CVPR,
