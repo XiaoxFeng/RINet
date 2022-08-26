@@ -48,6 +48,6 @@ wget http://host.robots.ox.ac.uk/pascal/VOC/voc2007/VOCdevkit_08-Jun-2007.tar
 6. Download pretrained ImageNet weights from [here](https://drive.google.com/drive/folders/0B1_fAEgxdnvJSmF3YUlZcHFqWTQ), and put it in the data/imagenet_weights/
 7. Download selective search proposals from [NWPU](https://drive.google.com/file/d/1VnmUDPomgTgmHvH3CemFOIWTLuVR5f-t/view?usp=sharing) and [DIOR](https://drive.google.com/file/d/1wbivkAxqBQB4vAX0APmVzIOhuawHpsPV/view?usp=sharing), and put it in the data/selective_search_data/
 ## Download models
-Models trained on DIOR can be downloaded here:[Google Drive.](https://drive.google.com/drive/folders/1xulStA_PCnd3bppfoKLQUc6OT_Wzbp2p?usp=sharing)
+Models trained on DIOR can be downloaded here:[Google Drive.](https://drive.google.com/file/d/1hRUTWxAE6vc_8tTOgSOUXW6wPr4SGKug/view?usp=sharing)
 ## Acknowledgement
 We borrowed code from [MLEM](https://github.com/vasgaowei/pytorch_MELM), [PCL](https://github.com/ppengtang/pcl.pytorch), and [Faster-RCNN](https://github.com/jwyang/faster-rcnn.pytorch).
