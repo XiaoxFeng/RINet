@@ -282,3 +282,50 @@ def test_net(net, imdb, roidb, weights_filename, max_per_image=100, thresh=0.):
   print('Evaluating detections')
   imdb.evaluate_detections(all_boxes, output_dir)
 
+def test_net_corloc(net, imdb, roidb, weights_filename, max_per_image=100, thresh=0.):
+    np.random.seed(cfg.RNG_SEED)
+    """Test a Fast R-CNN network on an image database."""
+    num_images = len(imdb.image_index)
+    # all detections are collected into:
+    #  all_boxes[cls][image] = N x 5 array of detections in
+    #  (x1, y1, x2, y2, score)
+    all_boxes = [[[] for _ in range(num_images)]
+                 for _ in range(imdb.num_classes)]
+    all_boxes_corloc = [[[] for _ in range(num_images)]
+                        for _ in range(imdb.num_classes)]
+
+    output_dir = get_output_dir(imdb, weights_filename)
+
+    ap_meter = AveragePrecisionMeter(difficult_examples=True)
+    ap_meter.reset()
+    # timers
+    _t = {'im_detect': Timer(), 'misc': Timer()}
+
+    for i in range(num_images):
+        im = cv2.imread(imdb.image_path_at(i))
+
+        _t['im_detect'].tic()
+        scores, boxes, det_cls_prob, target = im_detect(net, im, roidb[i])
+
+        _t['im_detect'].toc()
+
+        _t['misc'].tic()
+
+        output = np.reshape(det_cls_prob[:], (1, -1))
+        target = np.reshape(target[:], (1, -1))
+        ap_meter.add(output, target)
+
+        # skip j = 0, because it's the background class
+        for j in range(0, imdb.num_classes):
+            index = np.argmax(scores[:, j])
+            all_boxes_corloc[j][i] = \
+                np.hstack((boxes[index, j * 4:(j + 1) * 4].reshape(1, -1),
+                           np.array([[scores[index, j]]])))
+        _t['misc'].toc()
+
+        print('im_detect: {:d}/{:d} {:.3f}s {:.3f}s' \
+              .format(i + 1, num_images, _t['im_detect'].average_time(),
+                      _t['misc'].average_time()))
+
+    print('Evaluating localization')
+    imdb.evaluate_discovery(all_boxes_corloc, output_dir)
