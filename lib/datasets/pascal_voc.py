@@ -19,6 +19,7 @@ import pickle
 import subprocess
 import uuid
 from .voc_eval import voc_eval
+from .dis_eval import dis_eval
 from model.config import cfg
 
 
@@ -401,6 +402,49 @@ class pascal_voc(imdb):
       self.config['use_salt'] = True
       self.config['cleanup'] = True
 
+  def _eval_discovery(self, output_dir):
+    annopath = os.path.join(
+      self._devkit_path,
+      'VOC' + self._year,
+      'Annotations',
+      '{:s}.xml')
+    imagesetfile = os.path.join(
+      self._devkit_path,
+      'VOC' + self._year,
+      'ImageSets',
+      'Main',
+      self._image_set + '.txt')
+    cachedir = os.path.join(self._devkit_path, 'annotations_dis_cache_{}'.format(self._year))
+    corlocs = []
+    if not os.path.isdir(output_dir):
+      os.mkdir(output_dir)
+    for i, cls in enumerate(self._classes):
+      if cls == '__background__':
+        continue
+      filename = self._get_voc_results_file_template().format(cls)
+      corloc = dis_eval(
+        filename, annopath, imagesetfile, cls, cachedir, ovthresh=0.5)
+      corlocs += [corloc]
+      print('CorLoc for {} = {:.4f}'.format(cls, corloc))
+      with open(os.path.join(output_dir, cls + '_corloc.pkl'), 'wb') as f:
+        pickle.dump({'corloc': corloc}, f)
+    print('Mean CorLoc = {:.4f}'.format(np.mean(corlocs)))
+    print('~~~~~~~~')
+    print('Results:')
+    for corloc in corlocs:
+      print('{:.3f}'.format(corloc))
+    print('{:.3f}'.format(np.mean(corlocs)))
+    print('~~~~~~~~')
+
+  def evaluate_discovery(self, all_boxes, output_dir):
+    self._write_voc_results_file(all_boxes)
+    self._eval_discovery(output_dir)
+    if self.config['cleanup']:
+      for cls in self._classes:
+        if cls == '__background__':
+          continue
+        filename = self._get_voc_results_file_template().format(cls)
+        os.remove(filename)
 
 if __name__ == '__main__':
   from datasets.pascal_voc import pascal_voc
